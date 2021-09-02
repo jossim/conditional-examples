@@ -8,16 +8,16 @@ const Mailbox = (props) => {
   return (
     <div>
       <h1>Hello</h1>
-      {unreadMessages.length > 0 &&
+      {unreadMessages.length > 0 ?
         <h2>
           You have {unreadMessages.length} unread messages.
-        </h2>
+        </h2> : <h2>You have no messages</h2>
       }
     </div>
   )
 }
 
-const messages = ['Hello', 'How are you?', 'Please resond', 'you good?'];
+const messages = []; //['Hello', 'How are you?', 'Please resond', 'you good?'];
 
 function App() {
   return (
